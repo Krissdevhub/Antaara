@@ -145,12 +145,12 @@ export default async function AboutPage() {
               </div>
 
               {/* Memento / Honor thumbnail */}
-              <div className="relative -mt-10 mr-auto ml-4 w-44 aspect-[4/3] rounded-xl overflow-hidden border-2 border-white shadow-lg">
+              <div className="relative -mt-12 mr-auto ml-4 w-36 sm:w-44 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-white shadow-xl">
                 <Image
                   src="/assets/kirti_award_sheraton.jpg"
                   alt="Honor Recognition"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[center_10%]"
                 />
               </div>
             </div>

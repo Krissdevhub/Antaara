@@ -264,12 +264,12 @@ export default async function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="relative aspect-[4/4] rounded-2xl overflow-hidden shadow-md">
+                  <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-md">
                     <Image
                       src="/assets/kirti_award_sheraton.jpg"
                       alt="Kirti Jaiswal Rajpal Award"
                       fill
-                      className="object-cover"
+                      className="object-cover object-[center_12%]"
                     />
                   </div>
                 </div>
