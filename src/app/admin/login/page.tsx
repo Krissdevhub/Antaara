@@ -52,10 +52,11 @@ export default function AdminLoginPage() {
         <div className="flex flex-col items-center text-center mb-8">
           <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#C7A45B]/60 shadow-sm mb-4">
             <Image
-              src="/assets/antaara_logo_seal.jpg"
-              alt="Antaara"
+              src="/assets/antaara_logo.png"
+              alt="Antaara Unplugged Logo"
               fill
               className="object-cover"
+              priority
             />
           </div>
           <span className="text-[10px] uppercase tracking-[0.3em] font-sans font-semibold text-[#756B67]">

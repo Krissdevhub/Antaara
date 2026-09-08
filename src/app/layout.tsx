@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: '/assets/antaara_logo_seal.jpg',
+    icon: '/assets/antaara_logo.png',
   },
 };
 

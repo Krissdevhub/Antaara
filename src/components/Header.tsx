@@ -50,8 +50,8 @@ export function Header() {
         <Link href="/" className="group flex items-center gap-3">
           <div className="relative w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden border border-[#C7A45B]/40 shadow-xs transition-transform duration-300 group-hover:scale-105">
             <Image
-              src="/assets/antaara_logo_seal.jpg"
-              alt="Antaara Seal"
+              src="/assets/antaara_logo.png"
+              alt="Antaara Unplugged Logo"
               fill
               className="object-cover"
               priority

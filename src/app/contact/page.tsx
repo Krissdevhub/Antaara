@@ -51,8 +51,8 @@ export default async function ContactPage() {
                 <div className="flex items-center gap-3 mb-6">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#C7A45B]/40 shadow-xs">
                     <Image
-                      src="/assets/antaara_logo_seal.jpg"
-                      alt="Antaara Seal"
+                      src="/assets/antaara_logo.png"
+                      alt="Antaara Unplugged Logo"
                       fill
                       className="object-cover"
                     />

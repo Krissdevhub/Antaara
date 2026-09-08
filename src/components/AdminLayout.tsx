@@ -78,7 +78,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         <div className="flex items-center gap-3 pb-6 border-b border-[#756B67]/15">
           <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#C7A45B]/50">
             <Image
-              src="/assets/antaara_logo_seal.jpg"
+              src="/assets/antaara_logo.png"
               alt="Antaara"
               fill
               className="object-cover"
@@ -161,7 +161,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         <div className="flex items-center gap-3">
           <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#C7A45B]/50">
             <Image
-              src="/assets/antaara_logo_seal.jpg"
+              src="/assets/antaara_logo.png"
               alt="Antaara"
               fill
               className="object-cover"

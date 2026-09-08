@@ -13,8 +13,8 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#C7A45B]/40">
                 <Image
-                  src="/assets/antaara_logo_seal.jpg"
-                  alt="Antaara"
+                  src="/assets/antaara_logo.png"
+                  alt="Antaara Unplugged Logo"
                   fill
                   className="object-cover"
                 />

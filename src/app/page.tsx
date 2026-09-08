@@ -278,8 +278,8 @@ export default async function HomePage() {
               {/* Decorative Seal Overlay */}
               <div className="absolute -bottom-6 -right-4 w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-xl">
                 <Image
-                  src="/assets/antaara_logo_seal.jpg"
-                  alt="Seal"
+                  src="/assets/antaara_logo.png"
+                  alt="Antaara Logo Seal"
                   fill
                   className="object-cover"
                 />
