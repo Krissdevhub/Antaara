@@ -41,7 +41,7 @@ export default function AdminEpisodesPage() {
       guestName: '',
       guestCategory: 'Spirituality',
       description: '',
-      youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
       thumbnailUrl: '/assets/amogh_lila_thumb.jpg',
       duration: '45:00',
       publishDate: new Date().toISOString().split('T')[0],

@@ -28,9 +28,9 @@ export function getYoutubeEmbedUrl(url: string, autoplay = false): string {
     console.error('Invalid URL passed to getYoutubeEmbedUrl', e);
   }
 
-  // Fallback to a placeholder video if ID cannot be extracted
+  // Fallback to a default video if ID cannot be extracted
   if (!videoId) {
-    videoId = 'dQw4w9WgXcQ';
+    videoId = '3ZOH4oe45Sg';
   }
 
   return `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1${

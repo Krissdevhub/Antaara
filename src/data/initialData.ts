@@ -11,7 +11,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Exploring the deep connection between our internal state of mind and our external living environment. Renowned for bridging timeless spiritual philosophy with everyday life.',
     portraitUrl: '/assets/shri-amogh-lila-das-ji.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // easily editable field
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7', // easily editable field
     episodeTitle: 'Modern Mind, Ancient Wisdom: Spiritual Alignment & Inner Architecture',
     keyTopics: ['Mindfulness', 'Vedic Wisdom', 'Conscious Living', 'Mind & Environment'],
     isFeatured: true,
@@ -27,7 +27,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Uncover the secrets behind building commanding stage and screen presence, using your voice as your brand, and maintaining relevance in an increasingly competitive entertainment industry.',
     portraitUrl: '/assets/mr-manish-wadhwa-ji.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'The Authority of Presence: 30 Years of Cinema, Voice & Chanakya',
     keyTopics: ['Stage Presence', 'Voice Acting', 'Cinema Longevity', 'Character Mastery'],
     isFeatured: true,
@@ -43,7 +43,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Go behind the scenes of Bollywood: how successful scripts are born, the craft of writing layered female characters, navigating studio politics, and why authentic female stories are reshaping Indian cinema.',
     portraitUrl: '/assets/mrs-ishta-moitra.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: "Crafting Nuanced Stories: Inside Bollywood's Writing Rooms",
     keyTopics: ['Scriptwriting', 'Female Narratives', 'Bollywood Evolution', 'Creative Process'],
     isFeatured: true,
@@ -59,7 +59,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Learn how young professionals can leverage their skills for social impact, build sustainable initiatives from zero, and create lasting change in education and community development.',
     portraitUrl: '/assets/ms-madhavi-moyde.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Transforming Lives: Grassroots Social Impact & The Shakti Award',
     keyTopics: ['Education Equity', 'Grassroots Leadership', 'Social Welfare', 'Sustainable Impact'],
     isFeatured: false,
@@ -75,7 +75,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Learn how education shapes not just minds but values, how to mentor young people for social consciousness, and practical ways parents and educators can instill lasting character and empathy.',
     portraitUrl: '/assets/mrs-madhuri-moyde-ji.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: "Character, Empathy & Youth Mentorship: Shaping Tomorrow's Leaders",
     keyTopics: ['Value-Based Education', 'Empathy in Learning', 'Youth Mentorship', 'Community Building'],
     isFeatured: false,
@@ -91,7 +91,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Hear her raw stories about audition rejections, staying authentic in a commercial industry, building mental resilience, and why authenticity is your biggest career asset.',
     portraitUrl: '/assets/sheersha-tiwari.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Beyond The Screen: Authenticity & Mental Resilience in Television',
     keyTopics: ['Television Industry', 'Handling Rejection', 'Authentic Craft', 'Resilience'],
     isFeatured: false,
@@ -107,7 +107,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Discover her practical methods for handling rejection without losing confidence, staying grounded amid industry spotlight, constant reinvention strategies, and how to build a lasting career in volatile entertainment.',
     portraitUrl: '/assets/chandni-bhagwaani.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Grace Under Pressure: Reinvention & Longevity in Entertainment',
     keyTopics: ['Screen Acting', 'Confidence Building', 'Industry Spotlight', 'Creative Growth'],
     isFeatured: false,
@@ -123,7 +123,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Discover how to navigate creative chaos, find clarity in your unique voice, and build the resilience every artist needs to thrive. Discussing the courage it takes to be an artist, the chaos vs. calm in creativity, and finding one’s unique voice.',
     portraitUrl: '/assets/mrs-anchal-anita-dhara.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Vulnerability as Power: Spoken Word, Poetry & The Audacious Project',
     keyTopics: ['Spoken Word', 'Artistic Courage', 'Poetic Expression', 'Creative Flow'],
     isFeatured: false,
@@ -139,7 +139,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Explore how cybersecurity impacts your personal and professional life, practical digital safety tips for high-net-worth individuals, balancing a high-pressure government career with passion projects, and the importance of disconnecting in a hyperconnected world.',
     portraitUrl: '/assets/adgp-varun-kapoor-ji.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Cybersecurity, Leadership & Wildlife: High Stakes to Stillness',
     keyTopics: ['Cyber Defense', 'Public Leadership', 'Wildlife Photography', 'Digital Wellbeing'],
     isFeatured: false,
@@ -155,7 +155,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Explore how spiritual balance becomes the foundation for every area of your life—relationships, health, career—and learn tangible yoga and meditation techniques you can use immediately.',
     portraitUrl: '/assets/shri-mahesh-yogi-ji.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Foundations of Balance: Ancient Yogic Science for Modern Minds',
     keyTopics: ['Yoga Philosophy', 'Meditation', 'Inner Architecture', 'Holistic Health'],
     isFeatured: false,
@@ -171,7 +171,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Featured on Antaara Unplugged for an inspiring conversation on spirituality, purpose, and conscious living. Translating sacred scriptures into actionable guidance for modern urban challenges.',
     portraitUrl: '/assets/nityanand-charan-das-ji.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Conscious Purpose: Vedic Wisdom for Modern Life',
     keyTopics: ['Vedic Philosophy', 'Life Purpose', 'Inner Peace', 'Spiritual Counseling'],
     isFeatured: false,
@@ -187,7 +187,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Featured on Antaara Unplugged to discuss his musical journey, cultural impact, the golden era of 90s cassette culture, and enduring artistic legacy across generations.',
     portraitUrl: '/assets/altaf-raja.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'The Soul of Melody: Nostalgia, Musical Legacy & Timeless Art',
     keyTopics: ['Playback Singing', 'Musical Heritage', 'Artistic Journey', 'Cultural Memory'],
     isFeatured: false,
@@ -203,7 +203,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Featured on Antaara Unplugged for conversations on entrepreneurship, heritage preservation, and sustainable cultural tourism that respects indigenous traditions.',
     portraitUrl: '/assets/mackinlay-barreto.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: 'Preserving Heritage: Cultural Tourism & The Soul of Goa',
     keyTopics: ['Cultural Tourism', 'Heritage Preservation', 'Experiential Travel', 'Goan Culture'],
     isFeatured: false,
@@ -219,7 +219,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Featured on Antaara Unplugged to discuss fitness, nutrition, body transformation, and holistic physical & mental wellness strategies for sustainable peak vitality.',
     portraitUrl: '/assets/vinod-channa.jpg',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     episodeTitle: "Transforming the Body & Mind: Holistic Fitness from Bollywood's Top Coach",
     keyTopics: ['Celebrity Fitness', 'Holistic Nutrition', 'Body Transformation', 'Mental Discipline'],
     isFeatured: false,
@@ -236,7 +236,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Spirituality',
     description:
       'Our inaugural episode begins the Antaara Unplugged journey with Shri Amogh Lila Das Ji, exploring how modern urban humans can discover deep alignment, calm, and purposeful living through Vedic principles.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     thumbnailUrl: '/assets/amogh_lila_thumb.jpg',
     duration: '52:14',
     publishDate: '2024-04-10',
@@ -251,7 +251,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Cinema & Television',
     description:
       'A masterclass in stage presence, vocal authority, and cinematic endurance with veteran actor Manish Wadhwa, reflecting on iconic performances in Gadar 2, Pathaan, and the legendary Chanakya.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     thumbnailUrl: '/assets/mr-manish-wadhwa-ji.jpg',
     duration: '48:30',
     publishDate: '2024-05-18',
@@ -266,7 +266,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Cinema & Television',
     description:
       'Screenwriter Ishita Moitra breaks down the alchemy of modern scriptwriting, creating multidimensional female protagonists, and navigating the nuances of contemporary Indian cinema.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     thumbnailUrl: '/assets/mrs-ishta-moitra.jpg',
     duration: '45:10',
     publishDate: '2024-06-22',
@@ -281,7 +281,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Social Impact',
     description:
       'Shakti Awardee Madhavi Moyde shares the real trials and profound triumphs of grassroots education activism, building non-profits from scratch, and empowering marginalized children.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     thumbnailUrl: '/assets/ms-madhavi-moyde.jpg',
     duration: '41:50',
     publishDate: '2024-07-14',
@@ -296,7 +296,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Culture',
     description:
       'A deeply poetic and stirring dialogue with spoken word artist Anchal Anita Dhara on turning inner turmoil into resonant art, finding artistic bravery, and honoring one’s unfiltered voice.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     thumbnailUrl: '/assets/mrs-anchal-anita-dhara.jpg',
     duration: '39:40',
     publishDate: '2024-08-05',
@@ -311,7 +311,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Social Impact',
     description:
       'Special DG Varun Kapoor delves into digital safety in the modern age, leadership in high-stress public administration, and finding peace through wildlife photography in central India.',
-    youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
     thumbnailUrl: '/assets/adgp-varun-kapoor-ji.jpg',
     duration: '50:15',
     publishDate: '2024-09-02',

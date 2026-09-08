@@ -52,7 +52,7 @@ export default function AdminGuestsPage() {
       bio: '',
       fullDescription: '',
       portraitUrl: '/assets/shri-amogh-lila-das-ji.jpg',
-      youtubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+      youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
       episodeTitle: '',
       isFeatured: false,
     });
