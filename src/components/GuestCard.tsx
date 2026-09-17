@@ -12,8 +12,12 @@ interface GuestCardProps {
 export function GuestCard({ guest, featured = false }: GuestCardProps) {
   return (
     <div className="group relative flex flex-col bg-[#F4F1EC] rounded-2xl border border-[#756B67]/15 overflow-hidden p-6 md:p-7 hover:border-[#C7A45B]/50 transition-all duration-400 hover:shadow-md hover:-translate-y-0.5">
-      {/* Editorial Portrait Container with organic oval shape */}
-      <div className="relative w-full aspect-[4/4.5] overflow-hidden rounded-2xl bg-[#EDE5DE] mb-6">
+      {/* Editorial Portrait Container with organic oval shape - clickable with route to conversation */}
+      <Link
+        href={`/guests/${guest.slug}`}
+        aria-label={`Watch conversation with ${guest.name}`}
+        className="block relative w-full aspect-[4/4.5] overflow-hidden rounded-2xl bg-[#EDE5DE] mb-6 cursor-pointer"
+      >
         <Image
           src={guest.portraitUrl}
           alt={guest.name}
@@ -35,12 +39,17 @@ export function GuestCard({ guest, featured = false }: GuestCardProps) {
             <Play className="w-5 h-5 fill-current ml-0.5" />
           </div>
         </div>
-      </div>
+      </Link>
 
       {/* Guest Details */}
       <div className="flex flex-col flex-grow">
-        <h3 className="font-serif text-2xl md:text-[26px] text-[#292625] font-normal leading-tight group-hover:text-[#A5843A] transition-colors">
-          {guest.name}
+        <h3 className="font-serif text-2xl md:text-[26px] text-[#292625] font-normal leading-tight">
+          <Link
+            href={`/guests/${guest.slug}`}
+            className="group-hover:text-[#A5843A] hover:text-[#A5843A] transition-colors"
+          >
+            {guest.name}
+          </Link>
         </h3>
 
         <p className="text-[11px] uppercase tracking-[0.16em] text-[#756B67] font-sans font-semibold mt-1 mb-3">

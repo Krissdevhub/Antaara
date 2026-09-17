@@ -426,24 +426,37 @@ export default async function HomePage() {
                   key={ep.id}
                   className="flex flex-col bg-[#F4F1EC] rounded-2xl border border-[#756B67]/15 overflow-hidden group hover:border-[#C7A45B]/40 transition-all duration-300"
                 >
-                  <div className="relative aspect-video w-full bg-[#EDE5DE]">
+                  <a
+                    href={ep.youtubeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative aspect-video w-full bg-[#EDE5DE] block overflow-hidden group/thumb cursor-pointer"
+                    aria-label={`Watch ${ep.title}`}
+                  >
                     <Image
                       src={ep.thumbnailUrl}
                       alt={ep.title}
                       fill
                       className="object-cover group-hover:scale-103 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-[#292625]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="w-11 h-11 rounded-full bg-[#F4F1EC] text-[#292625] flex items-center justify-center shadow-md transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                        <Play className="w-4 h-4 fill-current ml-0.5" />
+                      </div>
+                    </div>
                     <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-[#292625]/80 backdrop-blur-xs text-[10px] font-sans text-[#F4F1EC]">
                       {ep.duration}
                     </div>
-                  </div>
+                  </a>
 
                   <div className="p-6 flex flex-col flex-grow">
                     <span className="text-[10px] uppercase tracking-[0.18em] font-sans text-[#A5843A] font-semibold mb-1">
                       {ep.guestCategory}
                     </span>
                     <h3 className="font-serif text-xl text-[#292625] mb-2 leading-snug group-hover:text-[#A5843A] transition-colors line-clamp-2">
-                      {ep.title}
+                      <a href={ep.youtubeUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#A5843A]">
+                        {ep.title}
+                      </a>
                     </h3>
                     <p className="font-sans text-xs text-[#756B67] line-clamp-2 mb-4 leading-relaxed">
                       {ep.description}

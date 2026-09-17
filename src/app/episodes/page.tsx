@@ -86,7 +86,9 @@ export default async function EpisodesPage() {
                   </div>
 
                   <h3 className="font-serif text-2xl text-[#292625] mb-2 leading-snug font-normal group-hover:text-[#A5843A] transition-colors line-clamp-2">
-                    {ep.title}
+                    <a href={ep.youtubeUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#A5843A]">
+                      {ep.title}
+                    </a>
                   </h3>
 
                   <p className="text-xs uppercase tracking-[0.12em] font-sans text-[#756B67] font-medium mb-3">
