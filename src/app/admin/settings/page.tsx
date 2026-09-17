@@ -114,31 +114,22 @@ export default function AdminSettingsPage() {
             )}
           </div>
 
-          <div className="text-xs font-sans text-[#756B67] leading-relaxed space-y-2 mt-4 pt-4 border-t border-[#756B67]/15">
-            <p>
-              The platform is currently operating in <strong>{supabaseConnected ? 'Supabase Synchronized' : 'Local Fallback'}</strong> mode.
-              All contact submissions, guest edits, and episode updates work immediately with zero latency.
-            </p>
-            <p>
-              To link your direct Supabase project, supply your credentials in <code className="bg-[#F4F1EC] px-1.5 py-0.5 rounded text-[#292625]">.env.local</code>:
-            </p>
-            <div className="p-3 rounded-xl bg-[#292625] text-[#EDE5DE] font-mono text-[11px] select-all">
-              NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co<br />
-              NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOi...
-            </div>
-            <div className="flex items-center gap-2 pt-2">
-              <span>SQL migration script ready at:</span>
-              <code className="bg-[#F4F1EC] px-1.5 py-0.5 rounded font-mono text-[#292625]">
-                supabase/schema.sql
-              </code>
-              <button
-                onClick={copySqlPath}
-                className="p-1 text-[#756B67] hover:text-[#292625] rounded"
-                title="Copy path"
-              >
-                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-              </button>
-            </div>
+          <div className="text-xs font-sans text-[#756B67] leading-relaxed mt-4 pt-4 border-t border-[#756B67]/15">
+            {supabaseConnected ? (
+              <div className="flex flex-wrap items-center justify-between gap-3 text-emerald-800">
+                <p className="flex items-center gap-2 font-medium">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Production database is live and synchronized with Supabase PostgreSQL.</span>
+                </p>
+                <span className="font-mono text-[11px] bg-[#F4F1EC] text-[#292625] px-2.5 py-1 rounded-full border border-[#756B67]/20">
+                  Project: lzzxykdqffmdtwqhjqlc
+                </span>
+              </div>
+            ) : (
+              <p className="text-amber-900">
+                Connecting to Supabase database engine...
+              </p>
+            )}
           </div>
         </div>
 

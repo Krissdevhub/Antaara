@@ -36,7 +36,7 @@ export async function getGuests(): Promise<Guest[]> {
         .from('guests')
         .select('*')
         .order('order_index', { ascending: true });
-      if (!error && data && data.length > 0) {
+      if (!error && data) {
         return data.map((item) => ({
           id: item.id,
           slug: item.slug,
@@ -144,7 +144,7 @@ export async function getEpisodes(): Promise<Episode[]> {
         .from('episodes')
         .select('*')
         .order('created_at', { ascending: false });
-      if (!error && data && data.length > 0) {
+      if (!error && data) {
         return data.map((item) => ({
           id: item.id,
           title: item.title,
