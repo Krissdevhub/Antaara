@@ -27,7 +27,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Uncover the secrets behind building commanding stage and screen presence, using your voice as your brand, and maintaining relevance in an increasingly competitive entertainment industry.',
     portraitUrl: '/assets/mr-manish-wadhwa-ji.jpg',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=CE3c-ul6m2k',
     episodeTitle: 'The Authority of Presence: 30 Years of Cinema, Voice & Chanakya',
     keyTopics: ['Stage Presence', 'Voice Acting', 'Cinema Longevity', 'Character Mastery'],
     isFeatured: true,
@@ -59,7 +59,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Learn how young professionals can leverage their skills for social impact, build sustainable initiatives from zero, and create lasting change in education and community development.',
     portraitUrl: '/assets/ms-madhavi-moyde.jpg',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=xxb8bLi5Faw',
     episodeTitle: 'Transforming Lives: Grassroots Social Impact & The Shakti Award',
     keyTopics: ['Education Equity', 'Grassroots Leadership', 'Social Welfare', 'Sustainable Impact'],
     isFeatured: false,
@@ -75,7 +75,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Learn how education shapes not just minds but values, how to mentor young people for social consciousness, and practical ways parents and educators can instill lasting character and empathy.',
     portraitUrl: '/assets/mrs-madhuri-moyde-ji.jpg',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=xxb8bLi5Faw',
     episodeTitle: "Character, Empathy & Youth Mentorship: Shaping Tomorrow's Leaders",
     keyTopics: ['Value-Based Education', 'Empathy in Learning', 'Youth Mentorship', 'Community Building'],
     isFeatured: false,
@@ -139,7 +139,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Explore how cybersecurity impacts your personal and professional life, practical digital safety tips for high-net-worth individuals, balancing a high-pressure government career with passion projects, and the importance of disconnecting in a hyperconnected world.',
     portraitUrl: '/assets/adgp-varun-kapoor-ji.jpg',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=fOzaEtIix-g',
     episodeTitle: 'Cybersecurity, Leadership & Wildlife: High Stakes to Stillness',
     keyTopics: ['Cyber Defense', 'Public Leadership', 'Wildlife Photography', 'Digital Wellbeing'],
     isFeatured: false,
@@ -171,7 +171,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Featured on Antaara Unplugged for an inspiring conversation on spirituality, purpose, and conscious living. Translating sacred scriptures into actionable guidance for modern urban challenges.',
     portraitUrl: '/assets/nityanand-charan-das-ji.jpg',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=P6er4y7Ss2A',
     episodeTitle: 'Conscious Purpose: Vedic Wisdom for Modern Life',
     keyTopics: ['Vedic Philosophy', 'Life Purpose', 'Inner Peace', 'Spiritual Counseling'],
     isFeatured: false,
@@ -187,7 +187,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Featured on Antaara Unplugged to discuss his musical journey, cultural impact, the golden era of 90s cassette culture, and enduring artistic legacy across generations.',
     portraitUrl: '/assets/altaf-raja.jpg',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=F3JQSNl5aV0',
     episodeTitle: 'The Soul of Melody: Nostalgia, Musical Legacy & Timeless Art',
     keyTopics: ['Playback Singing', 'Musical Heritage', 'Artistic Journey', 'Cultural Memory'],
     isFeatured: false,
@@ -219,7 +219,7 @@ export const initialGuests: Guest[] = [
     fullDescription:
       'Featured on Antaara Unplugged to discuss fitness, nutrition, body transformation, and holistic physical & mental wellness strategies for sustainable peak vitality.',
     portraitUrl: '/assets/vinod-channa.jpg',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=UiK5em6PtrE',
     episodeTitle: "Transforming the Body & Mind: Holistic Fitness from Bollywood's Top Coach",
     keyTopics: ['Celebrity Fitness', 'Holistic Nutrition', 'Body Transformation', 'Mental Discipline'],
     isFeatured: false,
@@ -251,7 +251,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Cinema & Television',
     description:
       'A masterclass in stage presence, vocal authority, and cinematic endurance with veteran actor Manish Wadhwa, reflecting on iconic performances in Gadar 2, Pathaan, and the legendary Chanakya.',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=CE3c-ul6m2k',
     thumbnailUrl: '/assets/mr-manish-wadhwa-ji.jpg',
     duration: '48:30',
     publishDate: '2024-05-18',
@@ -281,7 +281,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Social Impact',
     description:
       'Shakti Awardee Madhavi Moyde shares the real trials and profound triumphs of grassroots education activism, building non-profits from scratch, and empowering marginalized children.',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=xxb8bLi5Faw',
     thumbnailUrl: '/assets/ms-madhavi-moyde.jpg',
     duration: '41:50',
     publishDate: '2024-07-14',
@@ -311,7 +311,7 @@ export const initialEpisodes: Episode[] = [
     guestCategory: 'Social Impact',
     description:
       'Special DG Varun Kapoor delves into digital safety in the modern age, leadership in high-stress public administration, and finding peace through wildlife photography in central India.',
-    youtubeUrl: 'https://youtu.be/3ZOH4oe45Sg?si=pLv-I34XB-5AHRp7',
+    youtubeUrl: 'https://www.youtube.com/watch?v=fOzaEtIix-g',
     thumbnailUrl: '/assets/adgp-varun-kapoor-ji.jpg',
     duration: '50:15',
     publishDate: '2024-09-02',
@@ -370,6 +370,6 @@ export const initialSettings: SiteSettings = {
   contactEmail: 'antaaradesignstudio@gmail.com',
   contactAddress: 'Antaara Designing Studio, Indore, Madhya Pradesh, India',
   instagramUrl: 'https://instagram.com/AntaaraUnpluggedofficial',
-  youtubeUrl: 'https://youtube.com/@AntaaraUnplugged',
+  youtubeUrl: 'https://www.youtube.com/@AntaaraUnpluggedOfficial',
   featuredEpisodeId: 'ep-1',
 };
