@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { getSettings, updateSettings } from '@/lib/db';
-import { isSupabaseConfigured } from '@/lib/supabase';
 
 export async function GET() {
   try {
@@ -8,7 +7,6 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       data: settings,
-      supabaseConnected: isSupabaseConfigured,
     });
   } catch (error) {
     console.error('Error fetching settings:', error);
@@ -26,7 +24,6 @@ export async function PATCH(request: Request) {
     return NextResponse.json({
       success: true,
       data: updated,
-      supabaseConnected: isSupabaseConfigured,
     });
   } catch (error) {
     console.error('Error updating settings:', error);

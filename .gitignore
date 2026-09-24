@@ -30,9 +30,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
+# env & security files
 .env*
 !.env.example
+src/data/admin_auth.json
 
 # database schema (excluded per user request)
 /supabase/

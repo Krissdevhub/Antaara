@@ -3,10 +3,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Lock, ArrowRight, AlertCircle, Loader2 } from 'lucide-react';
+import { Lock, ArrowRight, AlertCircle, Loader2, Eye, EyeOff } from 'lucide-react';
 
 export default function AdminLoginPage() {
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const router = useRouter();
@@ -66,7 +67,7 @@ export default function AdminLoginPage() {
             Antaara Unplugged
           </h1>
           <p className="font-sans text-xs text-[#756B67] mt-1">
-            Enter administrative key to manage platform
+            Enter administrative credentials to manage platform
           </p>
         </div>
 
@@ -84,18 +85,27 @@ export default function AdminLoginPage() {
             </label>
             <div className="relative">
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 required
-                placeholder="Enter password"
+                placeholder="Enter your administrative password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-xl bg-[#F4F1EC] border border-[#756B67]/20 text-xs font-sans text-[#292625] placeholder-[#756B67]/50 focus:outline-none focus:border-[#C7A45B] focus:ring-1 focus:ring-[#C7A45B] transition-colors"
+                className="w-full pl-10 pr-11 py-3 rounded-xl bg-[#F4F1EC] border border-[#756B67]/20 text-xs font-sans text-[#292625] placeholder-[#756B67]/50 focus:outline-none focus:border-[#C7A45B] focus:ring-1 focus:ring-[#C7A45B] transition-colors"
               />
               <Lock className="w-4 h-4 text-[#756B67] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#756B67] hover:text-[#292625] transition-colors focus:outline-none cursor-pointer"
+                title={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? (
+                  <EyeOff className="w-4 h-4" />
+                ) : (
+                  <Eye className="w-4 h-4" />
+                )}
+              </button>
             </div>
-            <p className="text-[10px] text-[#756B67]/80 font-sans mt-1.5">
-              Default password: <code className="bg-[#F4F1EC] px-1 py-0.5 rounded text-[#292625]">antaara2024</code>
-            </p>
           </div>
 
           <button

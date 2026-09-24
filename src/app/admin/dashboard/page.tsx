@@ -11,7 +11,7 @@ import {
   Clock,
   CheckCircle2,
   AlertCircle,
-  Database,
+  Settings,
   Calendar,
 } from 'lucide-react';
 import { AdminLayout } from '@/components/AdminLayout';
@@ -250,10 +250,10 @@ export default function AdminDashboardPage() {
             className="p-6 rounded-2xl bg-[#F4F1EC] border border-[#756B67]/15 hover:border-[#C7A45B]/50 transition-all flex flex-col justify-between"
           >
             <div>
-              <Database className="w-6 h-6 text-emerald-700 mb-3" />
-              <h3 className="font-serif text-xl text-[#292625]">Supabase & Settings</h3>
+              <Settings className="w-6 h-6 text-[#292625] mb-3" />
+              <h3 className="font-serif text-xl text-[#292625]">Platform Settings</h3>
               <p className="font-sans text-xs text-[#756B67] mt-1">
-                Verify live database connectivity, update studio phone, email, and social links.
+                Update studio phone, official email, host biography, and change admin password.
               </p>
             </div>
             <span className="text-xs uppercase tracking-[0.14em] font-sans text-[#292625] mt-4 flex items-center gap-1 font-medium">

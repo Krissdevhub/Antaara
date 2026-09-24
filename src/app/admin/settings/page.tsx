@@ -1,7 +1,16 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Save, CheckCircle2, AlertCircle, Database, Copy, Check } from 'lucide-react';
+import {
+  Save,
+  CheckCircle2,
+  AlertCircle,
+  KeyRound,
+  ShieldCheck,
+  Eye,
+  EyeOff,
+  Loader2,
+} from 'lucide-react';
 import { AdminLayout } from '@/components/AdminLayout';
 import { SiteSettings } from '@/types';
 
@@ -10,8 +19,17 @@ export default function AdminSettingsPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [savedSuccess, setSavedSuccess] = useState(false);
-  const [supabaseConnected, setSupabaseConnected] = useState(false);
-  const [copied, setCopied] = useState(false);
+
+  // Change Password State
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showCurrentPassword, setShowCurrentPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [passwordLoading, setPasswordLoading] = useState(false);
+  const [passwordError, setPasswordError] = useState('');
+  const [passwordSuccess, setPasswordSuccess] = useState('');
 
   useEffect(() => {
     async function loadSettings() {
@@ -20,7 +38,6 @@ export default function AdminSettingsPage() {
         const data = await res.json();
         if (data.success) {
           setSettings(data.data);
-          setSupabaseConnected(data.supabaseConnected);
         }
       } catch (e) {
         console.error(e);
@@ -55,10 +72,61 @@ export default function AdminSettingsPage() {
     }
   };
 
-  const copySqlPath = () => {
-    navigator.clipboard.writeText('supabase/schema.sql');
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handlePasswordChange = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPasswordError('');
+    setPasswordSuccess('');
+
+    if (!currentPassword) {
+      setPasswordError('Please enter your current password.');
+      return;
+    }
+
+    if (!newPassword || newPassword.length < 6) {
+      setPasswordError('New password must be at least 6 characters long.');
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      setPasswordError('New password and confirm password do not match.');
+      return;
+    }
+
+    if (currentPassword === newPassword) {
+      setPasswordError('New password must be different from current password.');
+      return;
+    }
+
+    setPasswordLoading(true);
+
+    try {
+      const res = await fetch('/api/admin/change-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          currentPassword,
+          newPassword,
+          confirmPassword,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setPasswordSuccess(data.message || 'Password changed successfully!');
+        setCurrentPassword('');
+        setNewPassword('');
+        setConfirmPassword('');
+        setTimeout(() => setPasswordSuccess(''), 5000);
+      } else {
+        setPasswordError(data.error || 'Failed to update password. Please check your current password.');
+      }
+    } catch (err) {
+      console.error(err);
+      setPasswordError('Network error while updating password.');
+    } finally {
+      setPasswordLoading(false);
+    }
   };
 
   if (loading || !settings) {
@@ -80,57 +148,147 @@ export default function AdminSettingsPage() {
             Platform Governance
           </span>
           <h1 className="font-serif text-3xl md:text-4xl text-[#292625] font-light mt-0.5">
-            Settings & Integrations
+            Platform Settings
           </h1>
         </div>
 
-        {/* Supabase Integration Diagnostic Card */}
-        <div className="p-6 md:p-8 rounded-3xl bg-[#EDE5DE] border border-[#756B67]/20">
-          <div className="flex items-center justify-between gap-4 mb-4">
-            <div className="flex items-center gap-3">
-              <div className="p-3 rounded-2xl bg-[#F4F1EC] text-emerald-800">
-                <Database className="w-6 h-6" />
-              </div>
+        {/* Change Password Card */}
+        <div className="p-6 md:p-8 rounded-3xl bg-[#EDE5DE] border border-[#756B67]/20 space-y-6 shadow-sm">
+          <div className="flex items-center gap-3 pb-4 border-b border-[#756B67]/15">
+            <div className="p-2.5 rounded-2xl bg-[#F4F1EC] text-[#292625] border border-[#756B67]/15">
+              <KeyRound className="w-5 h-5 text-[#C7A45B]" />
+            </div>
+            <div>
+              <h3 className="font-serif text-2xl text-[#292625]">
+                Admin Security & Credentials
+              </h3>
+              <p className="font-sans text-xs text-[#756B67] mt-0.5">
+                Change your administrative password to keep the portal safe and secure
+              </p>
+            </div>
+          </div>
+
+          {passwordSuccess && (
+            <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center gap-2.5">
+              <CheckCircle2 className="w-4 h-4 shrink-0" />
+              <span>{passwordSuccess}</span>
+            </div>
+          )}
+
+          {passwordError && (
+            <div className="p-4 rounded-2xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2.5">
+              <AlertCircle className="w-4 h-4 shrink-0" />
+              <span>{passwordError}</span>
+            </div>
+          )}
+
+          <form onSubmit={handlePasswordChange} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 font-sans text-xs">
+              {/* Current Password */}
               <div>
-                <h3 className="font-serif text-2xl text-[#292625]">
-                  Supabase PostgreSQL Engine
-                </h3>
-                <p className="font-sans text-xs text-[#756B67]">
-                  Real-time database connection status
-                </p>
+                <label className="block uppercase tracking-[0.1em] text-[#292625] mb-1.5 font-medium">
+                  Current Password
+                </label>
+                <div className="relative">
+                  <input
+                    type={showCurrentPassword ? 'text' : 'password'}
+                    required
+                    placeholder="Enter current password"
+                    value={currentPassword}
+                    onChange={(e) => setCurrentPassword(e.target.value)}
+                    className="w-full px-3.5 pr-10 py-2.5 rounded-xl bg-[#F4F1EC] border border-[#756B67]/20 text-[#292625] placeholder-[#756B67]/50 focus:outline-none focus:border-[#C7A45B]"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowCurrentPassword(!showCurrentPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#756B67] hover:text-[#292625] cursor-pointer"
+                  >
+                    {showCurrentPassword ? (
+                      <EyeOff className="w-4 h-4" />
+                    ) : (
+                      <Eye className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* New Password */}
+              <div>
+                <label className="block uppercase tracking-[0.1em] text-[#292625] mb-1.5 font-medium">
+                  New Password
+                </label>
+                <div className="relative">
+                  <input
+                    type={showNewPassword ? 'text' : 'password'}
+                    required
+                    placeholder="At least 6 characters"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    className="w-full px-3.5 pr-10 py-2.5 rounded-xl bg-[#F4F1EC] border border-[#756B67]/20 text-[#292625] placeholder-[#756B67]/50 focus:outline-none focus:border-[#C7A45B]"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowNewPassword(!showNewPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#756B67] hover:text-[#292625] cursor-pointer"
+                  >
+                    {showNewPassword ? (
+                      <EyeOff className="w-4 h-4" />
+                    ) : (
+                      <Eye className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Confirm Password */}
+              <div>
+                <label className="block uppercase tracking-[0.1em] text-[#292625] mb-1.5 font-medium">
+                  Confirm New Password
+                </label>
+                <div className="relative">
+                  <input
+                    type={showConfirmPassword ? 'text' : 'password'}
+                    required
+                    placeholder="Repeat new password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    className="w-full px-3.5 pr-10 py-2.5 rounded-xl bg-[#F4F1EC] border border-[#756B67]/20 text-[#292625] placeholder-[#756B67]/50 focus:outline-none focus:border-[#C7A45B]"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#756B67] hover:text-[#292625] cursor-pointer"
+                  >
+                    {showConfirmPassword ? (
+                      <EyeOff className="w-4 h-4" />
+                    ) : (
+                      <Eye className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
               </div>
             </div>
 
-            {supabaseConnected ? (
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-sans font-medium">
-                <CheckCircle2 className="w-4 h-4" />
-                <span>Connected to Supabase</span>
-              </span>
-            ) : (
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-sans font-medium">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                <span>Local Resilient Store Active</span>
-              </span>
-            )}
-          </div>
-
-          <div className="text-xs font-sans text-[#756B67] leading-relaxed mt-4 pt-4 border-t border-[#756B67]/15">
-            {supabaseConnected ? (
-              <div className="flex flex-wrap items-center justify-between gap-3 text-emerald-800">
-                <p className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Production database is live and synchronized with Supabase PostgreSQL.</span>
-                </p>
-                <span className="font-mono text-[11px] bg-[#F4F1EC] text-[#292625] px-2.5 py-1 rounded-full border border-[#756B67]/20">
-                  Project: lzzxykdqffmdtwqhjqlc
-                </span>
-              </div>
-            ) : (
-              <p className="text-amber-900">
-                Connecting to Supabase database engine...
-              </p>
-            )}
-          </div>
+            <div className="flex justify-end pt-2">
+              <button
+                type="submit"
+                disabled={passwordLoading}
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#292625] text-[#F4F1EC] text-xs uppercase tracking-[0.14em] font-sans font-medium hover:bg-[#3D3937] transition-all cursor-pointer disabled:opacity-50"
+              >
+                {passwordLoading ? (
+                  <>
+                    <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    <span>Updating Password...</span>
+                  </>
+                ) : (
+                  <>
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#C7A45B]" />
+                    <span>Update Password</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </form>
         </div>
 
         {/* Settings Form */}

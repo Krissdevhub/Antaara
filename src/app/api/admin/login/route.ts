@@ -1,17 +1,26 @@
 import { NextResponse } from 'next/server';
+import { verifyAdminPassword } from '@/lib/auth';
 
 export async function POST(request: Request) {
   try {
     const { password } = await request.json();
-    const correctPassword = process.env.ADMIN_PASSWORD || 'antaara2024';
 
-    if (password === correctPassword) {
+    if (!password) {
+      return NextResponse.json(
+        { success: false, error: 'Password is required' },
+        { status: 400 }
+      );
+    }
+
+    const isValid = verifyAdminPassword(password);
+
+    if (isValid) {
       const response = NextResponse.json({
         success: true,
         message: 'Authentication successful',
       });
 
-      // Set cookie for 7 days
+      // Set session cookie for 7 days
       response.cookies.set({
         name: 'antaara_admin_session',
         value: 'authenticated_editor_session_token',

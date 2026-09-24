@@ -14,9 +14,6 @@ import {
   ExternalLink,
   Menu,
   X,
-  Database,
-  CheckCircle2,
-  AlertTriangle,
 } from 'lucide-react';
 
 interface AdminLayoutProps {
@@ -27,7 +24,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [supabaseConnected, setSupabaseConnected] = useState<boolean | null>(null);
 
   useEffect(() => {
     // Check auth status
@@ -40,14 +36,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       .catch(() => {
         if (pathname !== '/admin/login') router.push('/admin/login');
       });
-
-    // Check supabase status
-    fetch('/api/settings')
-      .then((r) => r.json())
-      .then((data) => {
-        setSupabaseConnected(Boolean(data.supabaseConnected));
-      })
-      .catch(() => setSupabaseConnected(false));
   }, [pathname, router]);
 
   const handleLogout = async () => {
@@ -94,27 +82,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           </div>
         </div>
 
-        {/* Database Status Pill */}
-        <div className="my-4 px-3 py-2 rounded-xl bg-[#F4F1EC] border border-[#756B67]/10 flex items-center justify-between text-[11px] font-sans">
-          <span className="flex items-center gap-1.5 text-[#756B67]">
-            <Database className="w-3.5 h-3.5" />
-            <span>Supabase</span>
-          </span>
-          {supabaseConnected ? (
-            <span className="inline-flex items-center gap-1 text-emerald-700 font-medium">
-              <CheckCircle2 className="w-3 h-3" />
-              <span>Live</span>
-            </span>
-          ) : (
-            <span className="inline-flex items-center gap-1 text-amber-700 font-medium" title="Using local fallback database. Add SUPABASE keys to sync.">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-              <span>Local Store</span>
-            </span>
-          )}
-        </div>
-
         {/* Navigation Items */}
-        <nav className="flex flex-col space-y-1 mt-2 flex-grow">
+        <nav className="flex flex-col space-y-1 mt-6 flex-grow">
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = isActive(item.href);
